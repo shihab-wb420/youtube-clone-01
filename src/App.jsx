@@ -4,7 +4,7 @@ import { ChannelDetail, VideoDetail, SearchFeed, Navbar, Feed } from './componen
 
 
 const App = () => {
-  
+   
 return(  
   <BrowserRouter>
     <Box sx={{ backgroundColor: '#000' }} minHeight="100vh" height="auto">

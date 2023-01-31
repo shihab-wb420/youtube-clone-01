@@ -20,11 +20,11 @@ const VideoDetail = ()=>{
     fetchFromApi(`search?part=snippet&relatedToVideoId=${id}`).then((data)=>setRelatedVideos(data?.items)).catch((err)=>console.log("related video fetching error",err))
   },[id]) 
  //console.log("relatedVideos fron video",relatedVideos)
- 
+  if(!videoDetail) return "Loading..."
   if(!videoDetail?.items[0]?.snippet) return "Loading...";
   const { snippet:{ title,channelId,channelTitle }, statistics:{ viewCount,likeCount } } = videoDetail.items[0];
+   
   
-
   return(
     <Box>
        <Stack direction={{xs:"column",md:"row"}}>

@@ -6,12 +6,17 @@ const options = {
     maxResults: '50',
   },
   headers: {
-    'X-RapidAPI-Key':'a31321e27dmsha1ef6ba30b85517p15c19ejsne99fb939a1e3',
+    'X-RapidAPI-Key':"a31321e27dmsha1ef6ba30b85517p15c19ejsne99fb939a1e3",
     'X-RapidAPI-Host': 'youtube-v31.p.rapidapi.com'
   }
 };
 
 export const fetchFromApi = async (url)=>{
- const {data} = await axios.get(`${baseUrl}/${url}`, options)
-  return data;
+try{
+   const {data} = await axios.get(`${baseUrl}/${url}`, options)
+   return data;
+ }catch(err){
+   console.log("api/fething error",err)
+ }
 }
+ 

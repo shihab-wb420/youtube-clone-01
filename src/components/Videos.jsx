@@ -4,7 +4,7 @@ import ChannelCard from "./ChannelCard"
 
 
 const Videos = ({videos, direction})=>{
-  if(!videos.length) return "Loading..."
+  if(!videos) return "Loading...";
   //console.log(videos)
   
   return(
